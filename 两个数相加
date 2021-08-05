@@ -1,8 +1,9 @@
-""" 加法计算器 
+""" 计算两个数相加
     利用了全局变量 global """
 
 def get_nmb():
-    """ 输入一个数 检查是否是真数 Y：返回数 """
+    """ 输入一个数 检查是否是真数 Y：返回数
+        同时检查是否为'q' Y：退出循环，结束主循环"""
     global flag
     while True:    
         a_nmb = input("Enter the a number: ")   
@@ -22,6 +23,7 @@ def get_nmb():
 # main
 print("This is a add computer")
 flag = True
+# 开始主循环
 while flag:
     a = get_nmb()            
     if flag == False:
