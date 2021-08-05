@@ -1,0 +1,33 @@
+""" 加法计算器 
+    利用了全局变量 global """
+
+def get_nmb():
+    """ 输入一个数 检查是否是真数 Y：返回数 """
+    global flag
+    while True:    
+        a_nmb = input("Enter the a number: ")   
+        if a_nmb == 'q':
+            flag = False
+            break
+        else:
+            try:
+                int(a_nmb)
+            except ValueError:
+                print("It's NOT a number!!!")
+            else:
+                print("Ok, I get it.")
+                return int(a_nmb)
+            
+
+# main
+print("This is a add computer")
+flag = True
+while flag:
+    a = get_nmb()            
+    if flag == False:
+        break
+    b = get_nmb()
+    if flag == False:
+        break
+    msg = str(a) + ' + ' + str(b) + ' = ' + str(a + b)
+    print('\n' + msg)    
